@@ -1,7 +1,7 @@
 # Build state
 Build plan version: 1.0
 Last updated: 2026-11-13 (after second usage-limit stop) B3 complete
-Current step: B7 (eval kit)
+Current step: B8 (pilot eval and build report)
 Branch: `handbook-v1` (baseline commit 27b0a92 is on `main`)
 
 Done:
@@ -31,16 +31,16 @@ D6 file checklist (the build scope):
 - [x] B6 `examples/handbook-examples/src/title.rs`
 - [x] B6 `examples/case-1-max-retries.md`
 - [x] B6 `examples/case-2-truncate-title.md`
-- [ ] B7 `eval/RUN.md`
-- [ ] B7 `eval/rubric.md`
-- [ ] B7 `eval/cases/case-01.md` to `case-08.md` (8 files)
-- [ ] B7 `eval/keys/key-01.md` to `key-08.md` (8 files)
+- [x] B7 `eval/RUN.md`
+- [x] B7 `eval/rubric.md`
+- [x] B7 `eval/cases/case-01.md` to `case-08.md` (8 files)
+- [x] B7 `eval/keys/key-01.md` to `key-08.md` (8 files)
 - [ ] B8 `eval/results/pilot-2026-11-13.md`
 - [ ] B8 `build/BUILD-REPORT.md`
 - [x] `build/00-build-state.md`
 - [x] `build/DEVIATIONS.md`
 
-Next step: B7. Build `eval/`: `cases/case-01.md` to `case-08.md` (prompt plus inline code or diff, no answer key and no link to one), `keys/key-01.md` to `key-08.md` (from `research/fable-run/02-synthetic-cases.md`), `rubric.md`, `RUN.md` (from D5 section 3). Cases 1 and 2 inline the code from `examples/handbook-examples/src/`. Commit. Then B8 pilot.
+Next step: B8. Pilot: cases 01, 02 and 04, once per condition (skill vs plain), same model (Sonnet 5.5), runners isolated in a scratch folder with no access to `eval/keys/`. A separate fresh subagent scores blind A/B copies against the keys and rubric; the lead spot-checks. Record to `eval/results/pilot-2026-11-13.md`. Then write `build/BUILD-REPORT.md`, run the section 8 self-check, final commit.
 
 Deviations logged: 4 (see build/DEVIATIONS.md)
 
