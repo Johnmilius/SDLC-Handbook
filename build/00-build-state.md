@@ -1,10 +1,11 @@
 # Build state
 Build plan version: 1.0
-Last updated: 2026-11-13 (after second usage-limit stop) B3 complete
-Current step: B8 (pilot eval and build report)
+Last updated: 2026-11-13, build complete
+Current step: COMPLETE (B0 to B8 done)
 Branch: `handbook-v1` (baseline commit 27b0a92 is on `main`)
 
 Done:
+- [x] B4 templates (683a72f), B5 skill (2649bc0), B6 examples (55c8ba8), B7 eval kit (b02c35c), B8 pilot (656eb47) and build report (final commit)
 - [x] B1 README, B2 quality bar, B3 all eight pages: committed one page per commit (see `git log`). Six pages were drafted by Sonnet workers and reviewed and corrected by the lead; quality-bar and plan-tests were written by the lead
 - [x] B0 Set up: inputs read, gate PASS confirmed in `research/fable-run/00-run-state.md`, `git init`, baseline commit 27b0a92, state and deviations files created
 
@@ -35,15 +36,15 @@ D6 file checklist (the build scope):
 - [x] B7 `eval/rubric.md`
 - [x] B7 `eval/cases/case-01.md` to `case-08.md` (8 files)
 - [x] B7 `eval/keys/key-01.md` to `key-08.md` (8 files)
-- [ ] B8 `eval/results/pilot-2026-11-13.md`
-- [ ] B8 `build/BUILD-REPORT.md`
+- [x] B8 `eval/results/pilot-2026-11-13.md`
+- [x] B8 `build/BUILD-REPORT.md`
 - [x] `build/00-build-state.md`
 - [x] `build/DEVIATIONS.md`
 
-Next step: B8. Pilot: cases 01, 02 and 04, once per condition (skill vs plain), same model (Sonnet 5.5), runners isolated in a scratch folder with no access to `eval/keys/`. A separate fresh subagent scores blind A/B copies against the keys and rubric; the lead spot-checks. Record to `eval/results/pilot-2026-11-13.md`. Then write `build/BUILD-REPORT.md`, run the section 8 self-check, final commit.
+Next step: None. The build is complete. Read `build/BUILD-REPORT.md`. Three decisions are waiting for the developer there (keep or change the first skill after a full evaluation; shorten the skill; merge `handbook-v1` into `main`).
 
 Deviations logged: 4 (see build/DEVIATIONS.md)
 
 Open issues:
 - Rule IDs are fixed by the research files: QB-1 to QB-13 (D4), TP-1 to TP-13 (D5). Other pages use RT, WF, VC, AG, SC prefixes and anchors `s1` to `s18` in `handbook/sources.md`.
-- Citations in pages take the form `[Label] Source edition §clause ([S15](sources.md#s15))`; `sources.md` holds the external link and date.
+- Citations in pages give a label, the source with its edition and clause, and a link to the matching `s1` to `s18` anchor in `handbook/sources.md`, which holds the external link and date.
