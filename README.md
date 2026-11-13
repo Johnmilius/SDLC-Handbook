@@ -43,6 +43,7 @@ TP-3  Test each boundary and its neighbors.  [Standard] ISTQB CTFL v4.0.1 (2024)
   - **[Established]**: long-standing practitioner guidance.
   - **[Observed]**: an empirical result. Its study card is in [sources](handbook/sources.md).
   - **[Proposed]**: this handbook's own synthesis. Treat it as provisional.
+  - **[T3 docs]** marks vendor documentation: it says how a tool works, not how well. **[Older-generation tools]** marks a result from AI models released before 2025.
 - **S15** is an entry in [handbook/sources.md](handbook/sources.md), which has the link and the date.
 
 ## Use a skill in another repository
