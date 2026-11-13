@@ -1,7 +1,7 @@
 # Build state
 Build plan version: 1.0
 Last updated: 2026-11-13 (after second usage-limit stop) B3 complete
-Current step: B5 (first skill)
+Current step: B7 (eval kit)
 Branch: `handbook-v1` (baseline commit 27b0a92 is on `main`)
 
 Done:
@@ -22,15 +22,15 @@ D6 file checklist (the build scope):
 - [x] B4 `templates/test-plan.md`
 - [x] B4 `templates/pr-description.md`
 - [x] B4 `templates/adr.md`
-- [ ] B5 `skills/test-plan/SKILL.md`
-- [ ] B5 `skills/test-plan/reference.md`
-- [ ] B6 `examples/README.md`
-- [ ] B6 `examples/handbook-examples/Cargo.toml`
-- [ ] B6 `examples/handbook-examples/src/lib.rs`
-- [ ] B6 `examples/handbook-examples/src/config.rs`
-- [ ] B6 `examples/handbook-examples/src/title.rs`
-- [ ] B6 `examples/case-1-max-retries.md`
-- [ ] B6 `examples/case-2-truncate-title.md`
+- [x] B5 `skills/test-plan/SKILL.md`
+- [x] B5 `skills/test-plan/reference.md`
+- [x] B6 `examples/README.md`
+- [x] B6 `examples/handbook-examples/Cargo.toml`
+- [x] B6 `examples/handbook-examples/src/lib.rs`
+- [x] B6 `examples/handbook-examples/src/config.rs`
+- [x] B6 `examples/handbook-examples/src/title.rs`
+- [x] B6 `examples/case-1-max-retries.md`
+- [x] B6 `examples/case-2-truncate-title.md`
 - [ ] B7 `eval/RUN.md`
 - [ ] B7 `eval/rubric.md`
 - [ ] B7 `eval/cases/case-01.md` to `case-08.md` (8 files)
@@ -40,9 +40,9 @@ D6 file checklist (the build scope):
 - [x] `build/00-build-state.md`
 - [x] `build/DEVIATIONS.md`
 
-Next step: B5. Re-read the Claude Code skills docs (https://code.claude.com/docs/en/skills) for frontmatter and loading rules, then write `skills/test-plan/SKILL.md` to the D5 section 1 spec and `skills/test-plan/reference.md` (pinned copy of TP-1 to TP-13, RT-1 to RT-4, QB-2, QB-3, QB-8, QB-13). Commit. Then B6 examples.
+Next step: B7. Build `eval/`: `cases/case-01.md` to `case-08.md` (prompt plus inline code or diff, no answer key and no link to one), `keys/key-01.md` to `key-08.md` (from `research/fable-run/02-synthetic-cases.md`), `rubric.md`, `RUN.md` (from D5 section 3). Cases 1 and 2 inline the code from `examples/handbook-examples/src/`. Commit. Then B8 pilot.
 
-Deviations logged: 3 (see build/DEVIATIONS.md)
+Deviations logged: 4 (see build/DEVIATIONS.md)
 
 Open issues:
 - Rule IDs are fixed by the research files: QB-1 to QB-13 (D4), TP-1 to TP-13 (D5). Other pages use RT, WF, VC, AG, SC prefixes and anchors `s1` to `s18` in `handbook/sources.md`.
