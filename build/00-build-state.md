@@ -1,22 +1,23 @@
 # Build state
 Build plan version: 1.0
-Last updated: 2026-11-13 05:50 MST
-Current step: B0 (done), B1 next
+Last updated: 2026-11-13 (after second usage-limit stop) B3 complete
+Current step: B4 (templates)
 Branch: `handbook-v1` (baseline commit 27b0a92 is on `main`)
 
 Done:
+- [x] B1 README, B2 quality bar, B3 all eight pages: committed one page per commit (see `git log`). Six pages were drafted by Sonnet workers and reviewed and corrected by the lead; quality-bar and plan-tests were written by the lead
 - [x] B0 Set up: inputs read, gate PASS confirmed in `research/fable-run/00-run-state.md`, `git init`, baseline commit 27b0a92, state and deviations files created
 
 D6 file checklist (the build scope):
-- [ ] B1 `README.md`
-- [ ] B2 `handbook/quality-bar.md`
-- [ ] B3 `handbook/workflow.md`
-- [ ] B3 `handbook/risk-tiers.md`
-- [ ] B3 `handbook/plan-tests.md`
-- [ ] B3 `handbook/verify-a-change.md`
-- [ ] B3 `handbook/working-with-agents.md`
-- [ ] B3 `handbook/standards-crosswalk.md`
-- [ ] B3 `handbook/sources.md`
+- [x] B1 `README.md`
+- [x] B2 `handbook/quality-bar.md`
+- [x] B3 `handbook/workflow.md`
+- [x] B3 `handbook/risk-tiers.md`
+- [x] B3 `handbook/plan-tests.md`
+- [x] B3 `handbook/verify-a-change.md`
+- [x] B3 `handbook/working-with-agents.md`
+- [x] B3 `handbook/standards-crosswalk.md`
+- [x] B3 `handbook/sources.md`
 - [ ] B4 `templates/acceptance-criteria.md`
 - [ ] B4 `templates/test-plan.md`
 - [ ] B4 `templates/pr-description.md`
@@ -39,9 +40,9 @@ D6 file checklist (the build scope):
 - [x] `build/00-build-state.md`
 - [x] `build/DEVIATIONS.md`
 
-Next step: B1. Write the root `README.md` (what the handbook is, pick-a-tool-by-task routing, folder map, how to use a skill in another repo, status, maintenance rule from D4 section 5). The D4 folders already exist. Commit, then B2 (`handbook/quality-bar.md` from D4 section 1).
+Next step: B4. Write the four templates in `templates/` (acceptance-criteria, test-plan, pr-description, adr): each at most one screen, with a filled-in synthetic example and a link back to its handbook section. Commit. Then B5 (`skills/test-plan/SKILL.md` and `reference.md` from D5 section 1; re-read the skills docs first).
 
-Deviations logged: 2 (see build/DEVIATIONS.md)
+Deviations logged: 3 (see build/DEVIATIONS.md)
 
 Open issues:
 - Rule IDs are fixed by the research files: QB-1 to QB-13 (D4), TP-1 to TP-13 (D5). Other pages use RT, WF, VC, AG, SC prefixes and anchors `s1` to `s18` in `handbook/sources.md`.
