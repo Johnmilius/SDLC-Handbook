@@ -1,0 +1,8 @@
+[package]
+name = "handbook-examples"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Synthetic examples with planted defects for the SDLC handbook. Not for production use."
+
+[dependencies]
