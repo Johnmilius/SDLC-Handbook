@@ -2,7 +2,20 @@
 
 Use at stage 6 of the [workflow](../handbook/workflow.md#wf-6), for every tier. It is the record of how the change was verified ([verify a change](../handbook/verify-a-change.md)) and of what was not ([QB-13](../handbook/quality-bar.md#qb-13)).
 
+Open with the TL;DR for people ([RV-8](../handbook/review-a-pr.md#rv-8)). Everything after the line is the record for agents and handoffs.
+
 ```markdown
+## TL;DR
+- **What and why:** <one line>
+- **Tier:** <1|2|3>
+- **Risks:** <what could go wrong for users, and how likely>
+- **Debt:** <shortcuts, missing tests, manual steps, things to revisit>
+- **Pros / cons:** <what we gain, and what it costs>
+- **Needs a person:** <approve, test, set something, decide>
+- **Not checked:** <the most important gaps>
+
+---
+
 ## What changed and why
 <two or three sentences. Link the acceptance criteria>
 
@@ -27,6 +40,17 @@ Tier: <1|2|3>  Triggers: <list or "none">
 ## Filled-in example (synthetic, Tier 2)
 
 ```markdown
+## TL;DR
+- **What and why:** lets an admin set the retry count (0 to 10, default 3), and the retry worker now uses it.
+- **Tier:** 2 (it adds to the public API).
+- **Risks:** jobs already running when the value changes keep the old count. Low impact.
+- **Debt:** no test for a write during a read under load.
+- **Pros / cons:** no redeploy needed to tune retries. One more setting to document.
+- **Needs a person:** approve and merge.
+- **Not checked:** jobs already running when the value changes; a write during a read under load.
+
+---
+
 ## What changed and why
 Adds PUT /config/max_retries (0 to 10, default 3) and makes the retry worker read the saved value.
 Criteria AC-1 to AC-4 in docs/changes/max-retries.md.

@@ -11,7 +11,7 @@ A short field guide for one developer who ships real software with the help of c
 | Fix a small bug | [Risk tiers](handbook/risk-tiers.md): confirm it is Tier 1 | Run the [`test-plan` skill](skills/test-plan/SKILL.md), write the failing test first, check the [quality bar](handbook/quality-bar.md) |
 | Build a feature | [Workflow](handbook/workflow.md) | [Acceptance criteria](templates/acceptance-criteria.md), then the [`test-plan` skill](skills/test-plan/SKILL.md), then [verify](handbook/verify-a-change.md) |
 | Make a high-risk change (auth, data migration, money, hard to undo) | [Risk tiers](handbook/risk-tiers.md): the escalation triggers | An [ADR](templates/adr.md), a Tier 3 [test plan](templates/test-plan.md), a line-by-line human review |
-| Review a change, mine or an agent's | [Quality bar](handbook/quality-bar.md) | [Verify a change](handbook/verify-a-change.md): what each check proves and does not prove |
+| Review a change, mine or an agent's | [Review a PR](handbook/review-a-pr.md): pick the tier, then review to that depth | [Quality bar](handbook/quality-bar.md), then [verify a change](handbook/verify-a-change.md): what each check proves and does not prove |
 | Release | [Verify a change](handbook/verify-a-change.md), then the [PR description](templates/pr-description.md) | A release page is planned for v2. Until then, tag the release and keep a last-good version you can redeploy |
 | Hand a task to an agent | [Working with agents](handbook/working-with-agents.md) | The delegation ladder and the enforcement map |
 | Answer "which standard says so?" | [Standards crosswalk](handbook/standards-crosswalk.md) | [Sources](handbook/sources.md) |
@@ -20,7 +20,7 @@ A short field guide for one developer who ships real software with the help of c
 
 | Folder | Holds |
 |---|---|
-| [handbook/](handbook/) | Reusable guidance. Eight short pages in v1 |
+| [handbook/](handbook/) | Reusable guidance. Eight short pages in v1, plus [Review a PR](handbook/review-a-pr.md) (added 2026-11-16, all [Proposed]) |
 | [skills/](skills/) | Agent instructions. One self-contained folder per skill |
 | [templates/](templates/) | One-screen templates, each with a filled-in synthetic example |
 | [examples/](examples/) | A small synthetic Rust crate with planted defects, and walkthroughs |
