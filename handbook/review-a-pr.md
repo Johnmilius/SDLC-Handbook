@@ -22,6 +22,8 @@ Every rule on this page is [Proposed]. It is this handbook's synthesis of the pa
 
 <a id="rv-7"></a>**RV-7** Keep the path-to-tier map and the project's own versions of the checks in the project's repository, as a project profile. This handbook holds only the method. [Proposed], following the README's rule that project decisions live with the project.
 
+<a id="rv-8"></a>**RV-8** Start every PR description and every review with a TL;DR for people: what and why, tier and verdict, risks, debt, pros and cons, what needs a person, and what was not checked. Use plain words with no rule IDs. A person should be able to decide from the TL;DR alone. Everything below it is detail for agents and handoffs. Write it last, place it first, and update it when the verdict changes. [Proposed]
+
 ## Step 1: Triage (a few minutes)
 
 1. Read the PR description and the list of changed files, not the diff yet.
@@ -56,23 +58,35 @@ Each tier includes everything in the tiers above it in this table.
 
 ## Step 3: Write the review
 
-**Tier 1**, about five lines:
+Every review opens with the TL;DR (RV-8). People read the TL;DR; agents and handoffs use the rest.
+
+**Tier 1**, about five lines. The TL;DR is most of the review:
 
 ```markdown
-Tier 1 (proposed). Triggers: none.
+## TL;DR
+- **What and why:** <one line>. Tier 1 (proposed). Triggers: none.
+- **Verdict:** <merge | merge after X | not yet>
+- **Not checked:** <list>
+
+---
 Checks: <passed, CI run or "author-run">. Tests touched: none. Dependencies: none.
 Read the diff: <one line, or "nothing to change">.
-Not verified: <list>.
-Verdict: <merge | merge after X | not yet>.
 ```
 
 **Tier 2 and 3:**
 
 ```markdown
-Tier <2|3> (proposed). Triggers: <list>.
+## TL;DR
+- **What and why:** <one line>
+- **Tier and verdict:** Tier <2|3> (proposed). <merge | merge after X | not yet>
+- **Risks:** <what could go wrong for users, and how likely>
+- **Debt:** <shortcuts, missing tests, manual steps, things to revisit>
+- **Pros / cons:** <what we gain, and what it costs>
+- **Needs a person:** <approve, test, set something, decide>
+- **Not checked:** <the most important gaps>
 
-## Verdict
-<merge | merge after the items marked "before merge" | not yet>, in one or two sentences.
+---
+Triggers: <list>.
 
 ## Evidence
 - Checks: <recorded result, or author-run> (VC-1 to VC-3)
